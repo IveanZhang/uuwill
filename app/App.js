@@ -1,7 +1,10 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { bootstrap } from './config/bootstrap';
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
+import { data } from './data';
+bootstrap();
 
 export default class App extends React.Component {
   state = {
@@ -34,12 +37,16 @@ export default class App extends React.Component {
         require('./assets/images/robot-prod.png'),
       ]),
       Font.loadAsync({
-        // This is the font that we are using for our tab bar
+        fontawesome: require('./assets/fonts/fontawesome.ttf'),
+        icomoon: require('./assets/fonts/icomoon.ttf'),
+        'Righteous-Regular': require('./assets/fonts/Righteous-Regular.ttf'),
+        'Roboto-Bold': require('./assets/fonts/Roboto-Bold.ttf'),
+        'Roboto-Medium': require('./assets/fonts/Roboto-Medium.ttf'),
+        'Roboto-Regular': require('./assets/fonts/Roboto-Regular.ttf'),
+        'Roboto-Light': require('./assets/fonts/Roboto-Light.ttf'),
         ...Icon.Ionicons.font,
-        // We include SpaceMono because we use it in HomeScreen.js. Feel free
-        // to remove this if you are not using it in your app
         'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
-      }),
+      })
     ]);
   };
 
