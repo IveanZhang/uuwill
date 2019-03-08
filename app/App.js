@@ -3,7 +3,7 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { bootstrap } from './config/bootstrap';
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
-import { data } from './data';
+
 bootstrap();
 
 export default class App extends React.Component {
@@ -33,8 +33,8 @@ export default class App extends React.Component {
   _loadResourcesAsync = async () => {
     return Promise.all([
       Asset.loadAsync([
-        require('./assets/images/robot-dev.png'),
-        require('./assets/images/robot-prod.png'),
+        require('./assets/images/banner1.jpg'),
+        require('./assets/images/banner2.jpg'),
       ]),
       Font.loadAsync({
         fontawesome: require('./assets/fonts/fontawesome.ttf'),
