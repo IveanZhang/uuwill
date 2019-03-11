@@ -46,7 +46,9 @@ $ npm start
 
 ## Preview
 
-|   |
+<p align="center">
+    <img src="./docs/images/demo.png" height=600/>
+</p>
 
 ## License
 

@@ -2,8 +2,8 @@
   "expoServerPort": 19000,
   "expoServerNgrokUrl": "https://p6-ssk.anonymous.uuwill.exp.direct",
   "packagerNgrokUrl": "https://packager.p6-ssk.anonymous.uuwill.exp.direct",
-  "ngrokPid": 50514,
+  "ngrokPid": 7013,
   "devToolsPort": 19002,
   "packagerPort": 19001,
-  "packagerPid": 50485
+  "packagerPid": 6996
 }
