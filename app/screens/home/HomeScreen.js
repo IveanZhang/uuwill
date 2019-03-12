@@ -100,7 +100,7 @@ export default class HomeScreen extends React.Component {
           <View>
             <Grid data={outlineData} columnNum={4} hasLine={false} />
           </View>
-
+          
           <IvaGrid />
         </View>
       </ScrollView >
