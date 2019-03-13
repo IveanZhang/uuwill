@@ -3,13 +3,11 @@ import {
   StyleSheet,
   ScrollView,
   View,
-  Text,
   Image
 } from 'react-native';
-import { Carousel, WingBlank, Grid } from '@ant-design/react-native';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { Carousel , Grid } from '@ant-design/react-native';
 import { IvaGrid } from '../../components/grid';
+import { ArticleList } from '../../components/articleList';
 
 
 export default class HomeScreen extends React.Component {
@@ -102,6 +100,7 @@ export default class HomeScreen extends React.Component {
           </View>
           
           <IvaGrid />
+          <ArticleList />
         </View>
       </ScrollView >
     );

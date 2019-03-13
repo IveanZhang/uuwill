@@ -8,32 +8,27 @@ import {
 import { Flex } from '@ant-design/react-native';
 import { data } from './data';
 
-export class IvaGrid extends React.Component {
-  componentName = 'IvaGrid';
-  typeMapping = {
-    container: {},
-    image: {},
-    badge: {},
-    badgeText: {},
-  };
+export class ArticleList extends React.Component {
+  componentName = 'articleList';
 
   renderImg = () => {
     return data.map((item, index) => {
       return (
         <View key={index} style={styles.innerBlock}>
-          <View style={styles.overlay}></View>
-          <Image style={styles.innerImg} source={{ url: item.img }} />
-          <Text style={styles.innerTitle}>{item.title}</Text>
-          <Text style={styles.innerSubTitle}>{item.subTitle}</Text>
+            <View style={styles.overlay}></View>
+            <Image style={styles.innerImg} source={{ url: item.img }} />
+            <Text style={styles.tag}>旅游</Text>
+            <Text style={styles.innerTitle}>{item.title}</Text>
         </View>)
     });
   }
 
   render() {
     return (
-      <Flex justify="center" wrap="wrap">
+      <View style={styles.container}>
+        <Text style={styles.title}>热点聚焦</Text>
         {this.renderImg()}
-      </Flex>
+      </View>
     );
   }
 }
@@ -42,11 +37,17 @@ const styles = StyleSheet.create({
   container: {
     margin: 20
   },
-  innerBlock: {
-    width: '45%',
-    margin: 5
+  title: {
+    paddingTop: 20,
+    paddingBottom: 10,
+    fontSize: 18,
+    color: '#777'
   },
-  overlay: {
+  innerBlock: {
+    width: '100%',
+    margin: 4
+  },
+  overlay: { 
     position: 'absolute',
     top: 0,
     left: 0,
@@ -60,21 +61,24 @@ const styles = StyleSheet.create({
     height: 100,
     position: 'relative',
   },
-  innerTitle: {
-    top: '15%',
-    left: '30%',
-    color: '#fff',
+  tag: {
+    fontSize: 12,
     position: 'absolute',
-    textAlign: 'center',
-    fontWeight: "700"
+    top: '5%',
+    left: '2%',
+    color: '#fff',
+    borderColor: '#fff',
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 4
   },
-  innerSubTitle: {
-    top: '25%',
-    left: '23%',
+  innerTitle: {
+    top: '40%',
+    left: '40%',
     color: '#fff',
     position: 'absolute',
     textAlign: 'center',
-    fontWeight: "700"
+    fontWeight: "700",
+    fontSize: 20
   }
-
 });
