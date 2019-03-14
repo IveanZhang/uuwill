@@ -5,7 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import Article1Screen from '../screens/articles/Article1Screen';
 import HomeScreen from '../screens/home/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import RecommendScreen from '../screens/recommendArticle/RecommendScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -21,6 +21,20 @@ HomeStack.navigationOptions = {
           ? `ios-information-circle${focused ? '' : '-outline'}`
           : 'md-information-circle'
       }
+    />
+  ),
+};
+
+const RecommendStack = createStackNavigator({
+  Links: RecommendScreen,
+});
+
+RecommendStack.navigationOptions = {
+  tabBarLabel: '推荐',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
     />
   ),
 };
@@ -43,22 +57,10 @@ ArticleStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
-});
 
-LinksStack.navigationOptions = {
-  tabBarLabel: '推荐',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
-    />
-  ),
-};
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  RecommendStack,
   ArticleStack,
 });
