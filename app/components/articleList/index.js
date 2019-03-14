@@ -72,8 +72,9 @@ const styles = StyleSheet.create({
     padding: 4
   },
   innerTitle: {
+    width: '100%',
     top: '40%',
-    left: '40%',
+    textAlign: 'center',
     color: '#fff',
     position: 'absolute',
     textAlign: 'center',
