@@ -48,4 +48,4 @@ fastlane/screenshots
 android/app/kittenTricks.jks
 *.orig
 
-.expo
+.expo/

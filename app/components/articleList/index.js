@@ -5,7 +5,6 @@ import {
   Text,
   StyleSheet
 } from 'react-native';
-import { Flex } from '@ant-design/react-native';
 import { data } from './data';
 
 export class ArticleList extends React.Component {
@@ -17,7 +16,7 @@ export class ArticleList extends React.Component {
         <View key={index} style={styles.innerBlock}>
             <View style={styles.overlay}></View>
             <Image style={styles.innerImg} source={{ url: item.img }} />
-            <Text style={styles.tag}>旅游</Text>
+            <Text style={styles.tag}>{item.tag}</Text>
             <Text style={styles.innerTitle}>{item.title}</Text>
         </View>)
     });
