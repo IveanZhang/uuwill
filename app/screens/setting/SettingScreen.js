@@ -15,7 +15,7 @@ import {
 
 export default class SettingScreen extends React.Component {
   static navigationOptions = {
-    title: 'Settings'.toUpperCase(),
+    title: '设置'.toUpperCase(),
   }; 
 
   state = {

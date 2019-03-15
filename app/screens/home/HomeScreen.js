@@ -12,6 +12,10 @@ import { ArticleList } from '../../components/articleList';
 
 export default class HomeScreen extends React.Component {
 
+  static navigationOptions = {
+    title: '全球智能商盟平台'.toUpperCase(),
+  };
+
   constructor(props) {
     super(props);
   }
