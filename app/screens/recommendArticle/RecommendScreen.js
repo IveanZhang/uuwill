@@ -34,7 +34,7 @@ export default class RecommendScreen extends React.Component {
   rendenItems(){
     return data.map((item, index) => {
       return (
-        <RecommendArticle  key={index} data={item}></RecommendArticle>
+        <RecommendArticle key={index} data={item}></RecommendArticle>
       );
     })
   }

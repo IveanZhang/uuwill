@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import Article1Screen from '../screens/articles/Article1Screen';
+import SettingScreen from '../screens/setting/SettingScreen';
 import HomeScreen from '../screens/home/HomeScreen';
 import RecommendScreen from '../screens/recommendArticle/RecommendScreen';
 
@@ -39,12 +39,12 @@ RecommendStack.navigationOptions = {
   ),
 };
 
-const ArticleStack = createStackNavigator({
-  Article: Article1Screen,
+const SettingStack = createStackNavigator({
+  Setting: SettingScreen,
 });
 
-ArticleStack.navigationOptions = {
-  tabBarLabel: 'Article',
+SettingStack.navigationOptions = {
+  tabBarLabel: '设置',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -62,5 +62,5 @@ ArticleStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   RecommendStack,
-  ArticleStack,
+  SettingStack,
 });
