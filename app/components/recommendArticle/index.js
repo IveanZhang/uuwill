@@ -12,7 +12,7 @@ export class RecommendArticle extends React.Component {
   renderImg = () => {
     return (
       <View style={styles.content}>
-        <View >
+        <View style={styles.left}>
           <Text style={styles.title}>{this.props.data.title}</Text>
           <View style={styles.category}>
             <Text style={styles.tag}>{this.props.data.tag}</Text>
@@ -20,7 +20,7 @@ export class RecommendArticle extends React.Component {
             <Text style={styles.tag}>{this.props.data.author}</Text>
           </View>
         </View>
-        <View>
+        <View style={styles.right}>
           <Image style={{width: 110, height: 72}} source={{ url: this.props.data.img }} />
         </View>
       </View>);
@@ -49,6 +49,14 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'space-between'
   },
+  right:{
+    width: '35%',
+    paddingLeft: 10
+  },
+  left: {
+    width: '65%',
+    paddingRight: 10
+  },
   title: {
     paddingTop: 10,
     paddingBottom: 10,
@@ -61,13 +69,5 @@ const styles = StyleSheet.create({
   category: {
     flex: 1,
     flexDirection: 'row'
-  },
-  innerBlock: {
-    width: '100%',
-    margin: 4
-  },
-  tag: {
-    fontSize: 12,
-    color: '#777',
   }
 });
