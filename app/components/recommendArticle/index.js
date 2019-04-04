@@ -3,27 +3,40 @@ import {
   Image,
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  TouchableHighlight
 } from 'react-native';
 
 export class RecommendArticle extends React.Component {
   componentName = 'recommendArticle';
 
+  constructor(props) {
+    super(props);
+    this.onPress = this.onPress.bind(this);
+  }
+
+  onPress = () => {
+    // this.setState({ pressState: !this.state.pressState });
+  }
+
   renderImg = () => {
     return (
-      <View style={styles.content}>
-        <View style={styles.left}>
-          <Text style={styles.title}>{this.props.data.title}</Text>
-          <View style={styles.category}>
-            <Text style={styles.tag}>{this.props.data.tag}</Text>
-            <Text style={styles.tag}> | </Text>
-            <Text style={styles.tag}>{this.props.data.author}</Text>
+      <TouchableHighlight onPress={this.onPress} underlayColor={'rgb(240, 240, 240)'} >
+        <View style={styles.content}>
+          <View style={styles.left}>
+            <Text style={styles.title}>{this.props.data.title}</Text>
+            <View style={styles.category}>
+              <Text style={styles.tag}>{this.props.data.tag}</Text>
+              <Text style={styles.tag}> | </Text>
+              <Text style={styles.tag}>{this.props.data.author}</Text>
+            </View>
+          </View>
+          <View style={styles.right}>
+            <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
           </View>
         </View>
-        <View style={styles.right}>
-          <Image style={{width: 110, height: 72}} source={{ url: this.props.data.img }} />
-        </View>
-      </View>);
+      </TouchableHighlight>
+    );
   }
 
   render() {
@@ -37,19 +50,17 @@ export class RecommendArticle extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
-    marginBottom: 0,
-    borderColor: '#777',
-    paddingBottom: 10,
-    borderBottomWidth: 1,
+    borderColor: '#A0A0A0',
+    borderBottomWidth: 0.5,
   },
-  content:{
+  content: {
     flex: 1,
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'space-between'
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
-  right:{
+  right: {
     width: '35%',
     paddingLeft: 10
   },
@@ -58,9 +69,11 @@ const styles = StyleSheet.create({
     paddingRight: 10
   },
   title: {
-    paddingTop: 10,
+    color: "#4F4F4F",
+    fontSize: 16,
+    fontWeight: "500",
+    paddingTop: 5,
     paddingBottom: 10,
-    fontSize: 18,
   },
   tag: {
     fontSize: 12,
