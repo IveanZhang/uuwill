@@ -19,6 +19,7 @@ export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     const data = [
       {
@@ -54,6 +55,7 @@ export default class HomeScreen extends React.Component {
         text: '地产'
       }
     ];
+
     const outlineData = data.map(item => ({
       icon: <Image style={{
         alignSelf: 'center',
@@ -89,7 +91,7 @@ export default class HomeScreen extends React.Component {
               }} source={require('../../assets/images/banner1.jpg')} resizeMode={'cover'} />
             </View>
             <View
-              style={[styles.containerHorizontal]}
+              style={[styles.containerHorizontal]} 
             >
               <Image style={{
                 alignSelf: 'center',
@@ -103,7 +105,7 @@ export default class HomeScreen extends React.Component {
             <Grid data={outlineData} columnNum={4} hasLine={false} />
           </View>
           
-          <IvaGrid />
+          <IvaGrid/>
           <ArticleList />
         </View>
       </ScrollView >

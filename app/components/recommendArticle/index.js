@@ -15,13 +15,13 @@ export class RecommendArticle extends React.Component {
     this.onPress = this.onPress.bind(this);
   }
 
-  onPress = () => {
-    // this.setState({ pressState: !this.state.pressState });
+  onPress(){
+    
   }
 
   renderImg = () => {
     return (
-      <TouchableHighlight onPress={this.onPress} underlayColor={'rgb(240, 240, 240)'} >
+      <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
         <View style={styles.content}>
           <View style={styles.left}>
             <Text style={styles.title}>{this.props.data.title}</Text>

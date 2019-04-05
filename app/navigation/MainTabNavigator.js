@@ -16,7 +16,7 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
+      name={ 
         Platform.OS === 'ios'
           ? `ios-information-circle${focused ? '' : '-outline'}`
           : 'md-information-circle'
@@ -27,6 +27,8 @@ HomeStack.navigationOptions = {
 
 const RecommendStack = createStackNavigator({
   Links: RecommendScreen,
+  Testing: SettingScreen,
+  Home: HomeScreen
 });
 
 RecommendStack.navigationOptions = {
@@ -56,8 +58,6 @@ SettingStack.navigationOptions = {
     />
   ),
 };
-
-
 
 export default createBottomTabNavigator({
   HomeStack,
