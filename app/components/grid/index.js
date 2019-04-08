@@ -3,7 +3,8 @@ import {
   Image,
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  TouchableOpacity
 } from 'react-native';
 import { Flex } from '@ant-design/react-native';
 import { data } from './data';
@@ -17,15 +18,18 @@ export class IvaGrid extends React.Component {
     badgeText: {},
   };
 
+  onPress() { }
+
   renderImg = () => {
     return data.map((item, index) => {
       return (
-        <View key={index} style={styles.innerBlock}>
+        <TouchableOpacity key={index} style={styles.innerBlock} onPress={() => { this.props.onPress(item.navigation.url, item.navigation.opt) }} >
           <View style={styles.overlay}></View>
           <Image style={styles.innerImg} source={{ url: item.img }} />
           <Text style={styles.innerTitle}>{item.title}</Text>
           <Text style={styles.innerSubTitle}>{item.subTitle}</Text>
-        </View>)
+        </TouchableOpacity>
+      )
     });
   }
 
@@ -76,5 +80,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: "700"
   }
-
 });

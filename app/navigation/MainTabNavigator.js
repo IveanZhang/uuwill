@@ -6,9 +6,11 @@ import TabBarIcon from '../components/TabBarIcon';
 import SettingScreen from '../screens/setting/SettingScreen';
 import HomeScreen from '../screens/home/HomeScreen';
 import RecommendScreen from '../screens/recommendArticle/RecommendScreen';
+import ServiceScreen from '../screens/services/ServiceScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
+  Service: ServiceScreen
 });
 
 HomeStack.navigationOptions = {
@@ -26,9 +28,7 @@ HomeStack.navigationOptions = {
 };
 
 const RecommendStack = createStackNavigator({
-  Links: RecommendScreen,
-  Testing: SettingScreen,
-  Home: HomeScreen
+  Links: RecommendScreen
 });
 
 RecommendStack.navigationOptions = {

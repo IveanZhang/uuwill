@@ -20,23 +20,31 @@ export default class HomeScreen extends React.Component {
     super(props);
   }
 
+  onPress(url, opt){
+    this.props.navigation.navigate(url, opt);
+  }
+
   render() {
     const data = [
       {
         url: 'http://www.uuwill.cn/Public/b/ly_b.png',
-        text: '旅游'
+        text: '旅游',
+        navigation: {url: "Service", opt:{ title: "旅游" }}
       },
       {
         url: 'http://www.uuwill.cn/Public/b/jy_b.png',
-        text: '教育'
+        text: '教育',
+        navigation: {url: "Service", opt: {title: "教育"}}
       },
       {
         url: 'http://www.uuwill.cn/Public/b/wh_b.png',
-        text: '文化'
+        text: '文化',
+        navigation: {url: "Service", opt: {title: "文化"}}
       },
       {
         url: 'http://www.uuwill.cn/Public/b/qz_b.png',
-        text: '签证'
+        text: '签证',
+        navigation: {url: "Service", opt: {title: "签证"}}
       },
       {
         url: 'http://www.uuwill.cn/Public/b/jr.png',
@@ -63,7 +71,7 @@ export default class HomeScreen extends React.Component {
         width: 40,
       }} source={{url:item.url}} resizeMode={'cover'} />,
       // icon: <FontAwesomeIcon icon={faCoffee} />,
-
+      navigation: item.navigation,
       text: item.text,
     }));
     return (
@@ -102,10 +110,10 @@ export default class HomeScreen extends React.Component {
           </Carousel>
 
           <View>
-            <Grid data={outlineData} columnNum={4} hasLine={false} />
+            <Grid data={outlineData} columnNum={4} hasLine={false} onPress={ (el, index)=>{this.onPress(el.navigation.url, el.navigation.opt)}}/>
           </View>
           
-          <IvaGrid/>
+          <IvaGrid onPress={ (url, opt)=>{this.onPress(url, opt)}}/>
           <ArticleList />
         </View>
       </ScrollView >

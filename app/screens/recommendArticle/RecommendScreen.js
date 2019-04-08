@@ -44,7 +44,7 @@ export default class RecommendScreen extends React.Component {
         <RecommendArticle 
           key={index} 
           data={item} 
-          handlePress = { () => {this.props.navigation.navigate("Home")}}  
+          handlePress = { () => {this.props.navigation.navigate("Estate")}} 
           >
         </RecommendArticle>
       );
