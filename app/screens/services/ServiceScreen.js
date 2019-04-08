@@ -7,6 +7,7 @@ import {
 import { ArticleList } from '../../components/articleList';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
 import DetailList from "../../components/detailList/index"
+import data from "../../data/raw/services";
 
 export default class ServiceScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -19,7 +20,8 @@ export default class ServiceScreen extends React.Component {
         super(props);
         this.state = {
             title: this.props.navigation.getParam('title'),
-            img: this.props.navigation.getParam('img')
+            img: this.props.navigation.getParam('img'),
+            articleList: data.articleList.data
         };
     }
 
@@ -37,7 +39,7 @@ export default class ServiceScreen extends React.Component {
                     source={this.state.img} />}
                     parallaxHeaderHeight={220}>
                     <DetailList />
-                    <ArticleList />
+                    <ArticleList data={this.state.articleList}/>
                 </ParallaxScrollView>
             </View>
         )

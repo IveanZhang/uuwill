@@ -5,7 +5,7 @@ import {
   View,
   Image
 } from 'react-native';
-import { Carousel , Grid } from '@ant-design/react-native';
+import { Carousel, Grid } from '@ant-design/react-native';
 import { IvaGrid } from '../../components/grid';
 import { ArticleList } from '../../components/articleList';
 import data from '../../data/raw/home';
@@ -18,20 +18,32 @@ export default class HomeScreen extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      banner: data.banner.data,
+      services: data.services.data,
+      detailList: data.detailList.data,
+      articleList: data.articleList.data
+    }
   }
 
-  onPress(url, opt){
+  onPress(url, opt) {
     this.props.navigation.navigate(url, opt);
-  } 
+  }
+
+  renderBanner() {
+    return this.state.banner.map((item, index) => {
+      return (
+        <View
+          style={[styles.containerHorizontal]} key={index}
+        >
+          <Image style={item.style} source={item.url} resizeMode={'cover'} />
+        </View>);
+    });
+  }
 
   render() {
-    const outlineData = data.map(item => ({
-      icon: <Image style={{
-        alignSelf: 'center',
-        height: 40,
-        width: 40,
-      }} source={{url:item.url}} resizeMode={'cover'} />,
-      // icon: <FontAwesomeIcon icon={faCoffee} />,
+    const outlineData = this.state.services.map(item => ({
+      icon: <Image style={styles.services} source={{ url: item.url }} resizeMode={'cover'} />,
       navigation: item.navigation,
       text: item.text,
     }));
@@ -50,32 +62,15 @@ export default class HomeScreen extends React.Component {
             infinite
             afterChange={this.onHorizontalSelectedIndexChange}
           >
-            <View
-              style={[styles.containerHorizontal]}
-            >
-              <Image style={{
-                alignSelf: 'center',
-                height: 220,
-                width: '100%',
-              }} source={require('../../assets/images/banner1.jpg')} resizeMode={'cover'} />
-            </View>
-            <View
-              style={[styles.containerHorizontal]} 
-            >
-              <Image style={{
-                alignSelf: 'center',
-                height: 220,
-                width: '100%',
-              }} source={require('../../assets/images/banner2.jpg')} resizeMode={'cover'} />
-            </View>
+            {this.renderBanner()}
           </Carousel>
 
           <View>
-            <Grid data={outlineData} columnNum={4} hasLine={false} onPress={ (el, index)=>{this.onPress(el.navigation.url, el.navigation.opt)}}/>
+            <Grid data={outlineData} columnNum={4} hasLine={false} onPress={(el, index) => { this.onPress(el.navigation.url, el.navigation.opt) }} />
           </View>
-          
-          <IvaGrid onPress={ (url, opt)=>{this.onPress(url, opt)}}/>
-          <ArticleList />
+
+          <IvaGrid data={this.state.detailList} onPress={(url, opt) => { this.onPress(url, opt) }} />
+          <ArticleList data={this.state.articleList} />
         </View>
       </ScrollView >
     );
@@ -91,6 +86,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 220,
+  },
+  services: {
+    alignSelf: 'center',
+    height: 40,
+    width: 40,
   },
   text: {
     color: '#fff',

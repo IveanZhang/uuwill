@@ -6,10 +6,8 @@ import {
     Image,
     TouchableOpacity,
     Dimensions,
-    ScrollView,
     FlatList,
 } from 'react-native';
-import Swiper from 'react-native-swiper';
 
 const { width, height } = Dimensions.get('window');
 

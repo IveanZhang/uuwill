@@ -6,13 +6,12 @@ import {
   StyleSheet,
   TouchableOpacity
 } from 'react-native';
-import { data } from './data';
 
 export class ArticleList extends React.Component {
   componentName = 'articleList';
 
   renderImg = () => {
-    return data.map((item, index) => {
+    return this.props.data.map((item, index) => {
       return (
         <TouchableOpacity key={index} style={styles.innerBlock}>
             <View style={styles.overlay}></View>

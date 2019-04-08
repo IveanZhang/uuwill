@@ -7,7 +7,6 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { Flex } from '@ant-design/react-native';
-import { data } from './data';
 
 export class IvaGrid extends React.Component {
   componentName = 'IvaGrid';
@@ -18,10 +17,17 @@ export class IvaGrid extends React.Component {
     badgeText: {},
   };
 
+  constructor(props){
+    super(props);
+    this.state = {
+      data: this.props.data
+    }
+  }
+
   onPress() { }
 
   renderImg = () => {
-    return data.map((item, index) => {
+    return this.state.data.map((item, index) => {
       return (
         <TouchableOpacity key={index} style={styles.innerBlock} onPress={() => { this.props.onPress(item.navigation.url, item.navigation.opt) }} >
           <View style={styles.overlay}></View>
