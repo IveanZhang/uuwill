@@ -33,7 +33,7 @@ export default class RecommendScreen extends React.Component {
   static navigationOptions = {
     title: '热门推荐'.toUpperCase(),
   }; 
-
+ 
   constructor(props){
     super(props);
   }

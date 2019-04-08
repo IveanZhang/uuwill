@@ -8,7 +8,7 @@ import {
 import { Carousel , Grid } from '@ant-design/react-native';
 import { IvaGrid } from '../../components/grid';
 import { ArticleList } from '../../components/articleList';
-
+import data from '../../data/raw/home';
 
 export default class HomeScreen extends React.Component {
 
@@ -22,48 +22,9 @@ export default class HomeScreen extends React.Component {
 
   onPress(url, opt){
     this.props.navigation.navigate(url, opt);
-  }
+  } 
 
   render() {
-    const data = [
-      {
-        url: 'http://www.uuwill.cn/Public/b/ly_b.png',
-        text: '旅游',
-        navigation: {url: "Service", opt:{ title: "旅游" }}
-      },
-      {
-        url: 'http://www.uuwill.cn/Public/b/jy_b.png',
-        text: '教育',
-        navigation: {url: "Service", opt: {title: "教育"}}
-      },
-      {
-        url: 'http://www.uuwill.cn/Public/b/wh_b.png',
-        text: '文化',
-        navigation: {url: "Service", opt: {title: "文化"}}
-      },
-      {
-        url: 'http://www.uuwill.cn/Public/b/qz_b.png',
-        text: '签证',
-        navigation: {url: "Service", opt: {title: "签证"}}
-      },
-      {
-        url: 'http://www.uuwill.cn/Public/b/jr.png',
-        text: '金融'
-      },
-      {
-        url: 'http://www.uuwill.cn/Public/b/jk.png',
-        text: '健康'
-      },
-      {
-        url: 'http://www.uuwill.cn/Public/b/ym.png',
-        text: '移民'
-      },
-      {
-        url: 'http://www.uuwill.cn/Public/b/dc.png',
-        text: '地产'
-      }
-    ];
-
     const outlineData = data.map(item => ({
       icon: <Image style={{
         alignSelf: 'center',

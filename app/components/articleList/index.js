@@ -3,7 +3,8 @@ import {
   Image,
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  TouchableOpacity
 } from 'react-native';
 import { data } from './data';
 
@@ -13,12 +14,12 @@ export class ArticleList extends React.Component {
   renderImg = () => {
     return data.map((item, index) => {
       return (
-        <View key={index} style={styles.innerBlock}>
+        <TouchableOpacity key={index} style={styles.innerBlock}>
             <View style={styles.overlay}></View>
             <Image style={styles.innerImg} source={{ url: item.img }} />
             <Text style={styles.tag}>{item.tag}</Text>
             <Text style={styles.innerTitle}>{item.title}</Text>
-        </View>)
+        </TouchableOpacity>)
     });
   }
 
@@ -34,7 +35,7 @@ export class ArticleList extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20
+    margin: 10
   },
   title: {
     paddingTop: 20,
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
   },
   innerBlock: {
     width: '100%',
-    margin: 4
+    marginBottom: 10
   },
   overlay: { 
     position: 'absolute',

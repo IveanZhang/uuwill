@@ -4,13 +4,23 @@ import {
     Text,
     View,
 } from 'react-native';
-
+import { ArticleList } from '../../components/articleList';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
+import DetailList from "../../components/detailList/index"
 
 export default class ServiceScreen extends React.Component {
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: navigation.getParam('title'),
+        };
+    };
 
     constructor(props) {
         super(props);
+        this.state = {
+            title: this.props.navigation.getParam('title'),
+            img: this.props.navigation.getParam('img')
+        };
     }
 
     render() {
@@ -24,9 +34,10 @@ export default class ServiceScreen extends React.Component {
                         height: 220,
                         width: '100%',
                     }}
-                    source={require('../../assets/images/estate.jpg')} />}
+                    source={this.state.img} />}
                     parallaxHeaderHeight={220}>
-                    <View style={{ alignItems: 'center' , marginBottom: 50}}><Text style={{ fontSize: 30 }}>{this.props.navigation.getParam("title")}</Text></View>
+                    <DetailList />
+                    <ArticleList />
                 </ParallaxScrollView>
             </View>
         )
