@@ -15,11 +15,9 @@ export class RecommendArticle extends React.Component {
     this.onPress = this.onPress.bind(this);
   }
 
-  onPress(){
-    
-  }
+  onPress(){}
 
-  renderImg = () => {
+  renderItems = () => {
     return (
       <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
         <View style={styles.content}>
@@ -42,7 +40,7 @@ export class RecommendArticle extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {this.renderImg()}
+        {this.renderItems()}
       </View>
     );
   }
