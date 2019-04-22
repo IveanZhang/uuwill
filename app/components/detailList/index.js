@@ -17,18 +17,7 @@ export default class DetailList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            topic: [
-                {
-                    title: '岁末清扫有它们，体验大不同',
-                    describe: '更轻松、更美好的大扫除攻略',
-                    price: '9.9元起',
-                },
-                {
-                    title: '新年一点红，幸运一整年',
-                    describe: '那些让你“红”运当头的好物',
-                    price: '9.9元起',
-                },
-            ]
+            topic: this.props.data
         };
     }
 

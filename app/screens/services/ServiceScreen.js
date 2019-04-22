@@ -21,7 +21,8 @@ export default class ServiceScreen extends React.Component {
         this.state = {
             title: this.props.navigation.getParam('title'),
             img: this.props.navigation.getParam('img'),
-            articleList: data.articleList.data
+            articleList: data.articleList.data,
+            detailList: data.detailList.data
         };
     }
 
@@ -38,7 +39,7 @@ export default class ServiceScreen extends React.Component {
                     }}
                     source={this.state.img} />}
                     parallaxHeaderHeight={220}>
-                    <DetailList />
+                    <DetailList data={this.state.detailList}/>
                     <ArticleList data={this.state.articleList}/>
                 </ParallaxScrollView>
             </View>
