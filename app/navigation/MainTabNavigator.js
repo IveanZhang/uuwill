@@ -7,10 +7,12 @@ import SettingScreen from '../screens/setting/SettingScreen';
 import HomeScreen from '../screens/home/HomeScreen';
 import RecommendScreen from '../screens/recommendArticle/RecommendScreen';
 import ServiceScreen from '../screens/services/ServiceScreen';
+import BlogPostScreen from '../screens/blogPost/BlogPostScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
-  Service: ServiceScreen
+  Service: ServiceScreen,
+  BlogPost: BlogPostScreen
 });
 
 HomeStack.navigationOptions = {

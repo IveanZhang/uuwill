@@ -4,9 +4,6 @@ import {
     Text,
     View,
 } from 'react-native';
-import { ArticleList } from '../../components/articleList';
-import ParallaxScrollView from 'react-native-parallax-scroll-view';
-import DetailList from "../../components/detailList/index"
 import data from "../../data/raw/services";
 
 export default class DetailsScreen extends React.Component {
@@ -28,7 +25,7 @@ export default class DetailsScreen extends React.Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-          
+
             </View>
         )
     }

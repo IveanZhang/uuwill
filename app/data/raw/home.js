@@ -88,47 +88,71 @@ const data = {
     detailList: {
         data: [
             {
-                title:'海外旅行',
+                title: '海外旅行',
                 subTitle: '多国特色签证',
-                img:'https://gw.alipayobjects.com/zos/rmsportal/PbwAYwivCOtoisJPLiEl.png',
-                navigation: { url: "Service", opt: {title: "地产"}}
+                img: 'https://gw.alipayobjects.com/zos/rmsportal/PbwAYwivCOtoisJPLiEl.png',
+                navigation: {
+                    url: "BlogPost",
+                    opt: {
+                        title: "海外旅行",
+                        img: require("../../assets/images/visa.jpg")
+                    }
+                }
             },
             {
-                title:'出国留学',
+                title: '出国留学',
                 subTitle: '全方位留学服务',
-                img:'https://gw.alipayobjects.com/zos/rmsportal/XvALZKsUSusBoNElpsQR.png',
-                navigation: { url: "Service", opt: {title: "出国"}}
+                img: 'https://gw.alipayobjects.com/zos/rmsportal/XvALZKsUSusBoNElpsQR.png',
+                navigation: {
+                    url: "BlogPost",
+                    opt: {
+                        title: "出国留学",
+                        img: require("../../assets/images/visa.jpg")
+                    }
+                }
             },
             {
-                title:'商务出行',
+                title: '商务出行',
                 subTitle: '出国工作安心无忧',
-                img:'https://gw.alipayobjects.com/zos/rmsportal/diNCydCwLYULFkNYLwQv.png',
-                navigation: { url: "Service", opt: {title: "商务"}}
+                img: 'https://gw.alipayobjects.com/zos/rmsportal/diNCydCwLYULFkNYLwQv.png',
+                navigation: {
+                    url: "BlogPost",
+                    opt: {
+                        title: "商务出行",
+                        img: require("../../assets/images/visa.jpg")
+                    }
+                }
             },
             {
-                title:'资产配置',
+                title: '资产配置',
                 subTitle: '基金联接境内外',
-                img:'https://gw.alipayobjects.com/zos/rmsportal/aFOMxoVVxuuNKemENjNQ.png',
-                navigation: { url: "Service", opt: {title: "资产"}}
+                img: 'https://gw.alipayobjects.com/zos/rmsportal/aFOMxoVVxuuNKemENjNQ.png',
+                navigation: {
+                    url: "BlogPost",
+                    opt: {
+                        title: "资产配置",
+                        img: require("../../assets/images/visa.jpg")
+                    }
+                }
             }
         ]
     },
     articleList: {
         data: [
             {
-                title:'嘉年华222',
+                title: '嘉年华',
                 tag: '文化',
-                img:'http://www.uuwill.cn/Public/video/20181212/5c106d097e9c8.jpg'
+                img: 'http://www.uuwill.cn/Public/video/20181212/5c106d097e9c8.jpg'
             },
             {
-                title:'加拿大移民',
+                title: '加拿大移民',
                 tag: '移民',
-                img:'http://www.uuwill.cn/Public/video/20181205/5c07f07b34aa1.jpg'
+                img: 'http://www.uuwill.cn/Public/video/20181205/5c07f07b34aa1.jpg'
             },
             {
-                title:'加拿大人工智能考察团',
+                title: '加拿大人工智能考察团',
                 tag: '文化',
-                img:'https://cdn-images-1.medium.com/max/1600/1*PlOTeS5syDCWSrYDUb7J7w.jpeg'
+                img: 'https://cdn-images-1.medium.com/max/1600/1*PlOTeS5syDCWSrYDUb7J7w.jpeg'
             }
         ]
     }
