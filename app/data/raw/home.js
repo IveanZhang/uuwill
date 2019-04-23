@@ -92,7 +92,7 @@ const data = {
                 subTitle: '多国特色签证',
                 img: 'https://gw.alipayobjects.com/zos/rmsportal/PbwAYwivCOtoisJPLiEl.png',
                 navigation: {
-                    url: "BlogPost",
+                    url: "Projects",
                     opt: {
                         title: "海外旅行",
                         img: require("../../assets/images/visa.jpg")
@@ -104,7 +104,7 @@ const data = {
                 subTitle: '全方位留学服务',
                 img: 'https://gw.alipayobjects.com/zos/rmsportal/XvALZKsUSusBoNElpsQR.png',
                 navigation: {
-                    url: "BlogPost",
+                    url: "Projects",
                     opt: {
                         title: "出国留学",
                         img: require("../../assets/images/visa.jpg")
@@ -116,7 +116,7 @@ const data = {
                 subTitle: '出国工作安心无忧',
                 img: 'https://gw.alipayobjects.com/zos/rmsportal/diNCydCwLYULFkNYLwQv.png',
                 navigation: {
-                    url: "BlogPost",
+                    url: "Projects",
                     opt: {
                         title: "商务出行",
                         img: require("../../assets/images/visa.jpg")
@@ -128,7 +128,7 @@ const data = {
                 subTitle: '基金联接境内外',
                 img: 'https://gw.alipayobjects.com/zos/rmsportal/aFOMxoVVxuuNKemENjNQ.png',
                 navigation: {
-                    url: "BlogPost",
+                    url: "Projects",
                     opt: {
                         title: "资产配置",
                         img: require("../../assets/images/visa.jpg")

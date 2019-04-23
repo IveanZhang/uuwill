@@ -10,7 +10,7 @@ import ParallaxScrollView from 'react-native-parallax-scroll-view';
 import data from "../../data/raw/posts";
 import { RecommendArticle } from '../../components/recommendArticle';
 
-export default class BlogPostScreen extends React.Component {
+export default class ProjectScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: navigation.getParam('title'),
@@ -23,18 +23,19 @@ export default class BlogPostScreen extends React.Component {
       title: this.props.navigation.getParam('title'),
       img: this.props.navigation.getParam('img'),
       articleList: data.articleList.data,
-      posts: data.posts.data,
+      articles: data.articles,
     };
   }
 
   renderPosts = () => {
-    return this.state.posts.map((item, index) => {
+    return this.state.articles.map((item, index) => {
       return (
         <RecommendArticle
           key={index}
           data={item}
-          handlePress={() => { this.props.navigation.navigate("Estate") }}
-        />
+          handlePress={() => { this.props.navigation.navigate('Details', {article: item.id}) }}
+        >
+        </RecommendArticle>
       );
     });
   }
