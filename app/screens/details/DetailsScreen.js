@@ -1,10 +1,12 @@
 import React from 'react';
 import {
-    Image,
-    Text,
-    View,
+  Image,
+  View,
+  Text,
+  StyleSheet
 } from 'react-native';
-import data from "../../data/raw/services";
+import ParallaxScrollView from 'react-native-parallax-scroll-view';
+import {findArticle} from '../../utils/textUtils';
 
 export default class DetailsScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -16,17 +18,84 @@ export default class DetailsScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: this.props.navigation.getParam('title'),
-            img: this.props.navigation.getParam('img'),
-            articleList: data.articleList.data
+            id: this.props.navigation.getParam('article'),
+            details: findArticle(this.props.navigation.getParam('article'))
         };
     }
 
     render() {
         return (
             <View style={{ flex: 1 }}>
-
+                <ParallaxScrollView
+                    backgroundColor="#fff"
+                    style={{ flex: 1, backgroundColor: 'hotpink', overflow: 'hidden' }}
+                    renderBackground={() => <Image style={{
+                        alignSelf: 'center',
+                        height: 220,
+                        width: '100%',
+                    }}
+                        source={{url: this.state.details.img}} />}
+                    parallaxHeaderHeight={220}>
+                    <View style={styles.container}>
+                        <Text style={styles.title}>{this.state.details.title}</Text>
+                        <View style={styles.authorinfo}>
+                            <Text style={styles.tag}>{this.state.details.author}</Text>
+                            <Text style={styles.tag}>|</Text>
+                            <Text style={styles.tag}>{this.state.details.tag}</Text>
+                        </View>
+                        <Text style={styles.subtitle}>{this.state.details.details.subtitle}</Text>
+                        <View style={styles.alignCenter}>
+                            <View style={styles.seperator}></View>
+                        </View>
+                        <Text style={styles.content}>{this.state.details.details.content}</Text>
+                    </View>
+                </ParallaxScrollView>
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      margin: 20,
+      backgroundColor: '#fff',
+    },
+    authorinfo:{
+        flex: 1,
+        padding: 15,
+        flexDirection: 'row'
+    },
+    title: {
+        fontWeight: '700',
+        lineHeight: 35,
+        fontSize: 25,
+    },
+    tag: {
+        fontSize: 16,
+        color: '#777',
+        paddingRight: 7     
+    },
+    subtitle: {
+        paddingTop: 30,
+        fontSize: 20,
+        color: '#777',
+        textAlign: 'center'
+    },
+    seperator: {
+        flex: 1,
+        width: 50,
+        margin: 20,
+        borderBottomWidth: 2,
+        borderColor: "#777"
+    },
+    alignCenter: {
+        flex: 1,
+        alignItems: 'center'
+    },
+    content: {
+        fontSize: 16,
+        lineHeight: 25,
+    }
+  });
+  
