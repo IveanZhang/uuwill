@@ -15,7 +15,7 @@ export class RecommendArticle extends React.Component {
         this.onPress = this.onPress.bind(this);
     }
 
-    onPress() { }
+    onPress() {}
 
     renderItems = () => {
         return (
