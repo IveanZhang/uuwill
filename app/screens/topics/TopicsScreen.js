@@ -5,10 +5,10 @@ import {
     Text,
     StyleSheet
 } from 'react-native';
-import { ArticleList } from '../../components/articleList';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
 import data from "../../data/raw/posts";
 import { RecommendArticle } from '../../components/recommendArticle';
+import PhotoGallery from '../../components/photoGallery/PhotoGallery';
 
 export default class TopicsScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -22,7 +22,7 @@ export default class TopicsScreen extends React.Component {
         this.state = {
             title: this.props.navigation.getParam('title'),
             img: this.props.navigation.getParam('img'),
-            articleList: data.articleList.data,
+            photoGallery: data.photoGallery,
             articles: data.articles,
         };
     }
@@ -54,11 +54,12 @@ export default class TopicsScreen extends React.Component {
                         source={this.state.img} />}
                     parallaxHeaderHeight={220}>
 
+                    <PhotoGallery data={this.state.photoGallery} />
+
                     <View style={styles.blogContainer}>
                         <Text style={styles.blogTitle}>精选文章</Text>
                         {this.renderPosts()}
                     </View>
-                    <ArticleList data={this.state.articleList} />
                 </ParallaxScrollView>
             </View>
         )

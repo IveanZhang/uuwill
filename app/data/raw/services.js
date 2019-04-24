@@ -2,7 +2,7 @@ const data = {
     articleList: {
         data: [
             {
-                title: '嘉年华222',
+                title: '嘉年华',
                 tag: '文化',
                 img: 'http://www.uuwill.cn/Public/video/20181212/5c106d097e9c8.jpg'
             },
