@@ -11,61 +11,61 @@ import ProjectScreen from '../screens/projects/ProjectScreen'
 import DetailsScreen from '../screens/details/DetailsScreen';
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
-  Service: ServiceScreen,
-  Projects: ProjectScreen,
-  Details: DetailsScreen
+    Home: HomeScreen,
+    Service: ServiceScreen,
+    Projects: ProjectScreen,
+    Details: DetailsScreen
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: '首页',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={ 
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
-  ),
+    tabBarLabel: '首页',
+    tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+            focused={focused}
+            name={
+                Platform.OS === 'ios'
+                    ? `ios-information-circle${focused ? '' : '-outline'}`
+                    : 'md-information-circle'
+            }
+        />
+    ),
 };
 
 const RecommendStack = createStackNavigator({
-  Links: RecommendScreen,
-  Details: DetailsScreen
+    Links: RecommendScreen,
+    Details: DetailsScreen
 });
 
 RecommendStack.navigationOptions = {
-  tabBarLabel: '推荐',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
-    />
-  ),
+    tabBarLabel: '推荐',
+    tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+            focused={focused}
+            name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+        />
+    ),
 };
 
 const SettingStack = createStackNavigator({
-  Setting: SettingScreen,
+    Setting: SettingScreen,
 });
 
 SettingStack.navigationOptions = {
-  tabBarLabel: '设置',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
-  ),
+    tabBarLabel: '设置',
+    tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+            focused={focused}
+            name={
+                Platform.OS === 'ios'
+                    ? `ios-information-circle${focused ? '' : '-outline'}`
+                    : 'md-information-circle'
+            }
+        />
+    ),
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
-  RecommendStack,
-  SettingStack,
+    HomeStack,
+    RecommendStack,
+    SettingStack,
 });

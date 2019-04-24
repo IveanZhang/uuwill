@@ -11,7 +11,7 @@ import {
 
 const { width, height } = Dimensions.get('window');
 
- 
+
 export default class DetailList extends Component {
 
     constructor(props) {
@@ -112,43 +112,43 @@ const styles = StyleSheet.create({
     },
     topic: {
         width: width,
-        alignItems:'flex-start',
+        alignItems: 'flex-start',
         backgroundColor: '#fff',
-        paddingBottom:10,
-        marginBottom:10,
+        paddingBottom: 10,
+        marginBottom: 10,
     },
-    topicHead:{
-        fontSize:18,
-        color:'#666',
-        padding:15,
+    topicHead: {
+        fontSize: 18,
+        color: '#666',
+        padding: 15,
     },
     topicItem: {
-        width: width*0.7,
-        marginLeft:15,
+        width: width * 0.7,
+        marginLeft: 15,
     },
     topicImg: {
-        width: width*0.7,
-        height: width*0.4,
-        borderWidth:0.5,
-        borderColor:'#cdcdcd',
-        borderRadius:2,
+        width: width * 0.7,
+        height: width * 0.4,
+        borderWidth: 0.5,
+        borderColor: '#cdcdcd',
+        borderRadius: 2,
     },
-    topicContainer:{
+    topicContainer: {
         flexDirection: 'row',
-        justifyContent:'space-between',
-        marginTop:10,
+        justifyContent: 'space-between',
+        marginTop: 10,
     },
-    topicTitle:{
-        fontSize:16,
-        color:'#666',
+    topicTitle: {
+        fontSize: 16,
+        color: '#666',
     },
-    topicDesc:{
-        fontSize:13,
-        color:'#999',
-        marginTop:3,
+    topicDesc: {
+        fontSize: 13,
+        color: '#999',
+        marginTop: 3,
     },
-    topicPrice:{
-        fontSize:14,
-        color:'#b4282d',
+    topicPrice: {
+        fontSize: 14,
+        color: '#b4282d',
     },
 });

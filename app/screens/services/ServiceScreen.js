@@ -36,10 +36,10 @@ export default class ServiceScreen extends React.Component {
                         height: 220,
                         width: '100%',
                     }}
-                    source={this.state.img} />}
+                        source={this.state.img} />}
                     parallaxHeaderHeight={220}>
-                    <DetailList data={this.state.detailList}/>
-                    <ArticleList data={this.state.articleList}/>
+                    <DetailList data={this.state.detailList} />
+                    <ArticleList data={this.state.articleList} />
                 </ParallaxScrollView>
             </View>
         )

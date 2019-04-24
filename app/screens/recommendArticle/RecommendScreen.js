@@ -5,39 +5,39 @@ import articles from '../../data/raw/articles';
 
 
 export default class RecommendScreen extends React.Component {
-  static navigationOptions = {
-    title: '热门推荐'.toUpperCase(),
-  };
+    static navigationOptions = {
+        title: '热门推荐'.toUpperCase(),
+    };
 
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
-  rendenItems() {
-    return articles.map((item, index) => {
-      return (
-        <RecommendArticle
-          key={index}
-          data={item}
-          handlePress={() => { this.props.navigation.navigate('Details', {article: item.id}) }}
-        >
-        </RecommendArticle>
-      );
-    })
-  }
+    rendenItems() {
+        return articles.map((item, index) => {
+            return (
+                <RecommendArticle
+                    key={index}
+                    data={item}
+                    handlePress={() => { this.props.navigation.navigate('Details', { article: item.id }) }}
+                >
+                </RecommendArticle>
+            );
+        })
+    }
 
-  render() {
-    return (
-      <ScrollView style={styles.container}>
-        {this.rendenItems()}
-      </ScrollView>
-    );
-  }
+    render() {
+        return (
+            <ScrollView style={styles.container}>
+                {this.rendenItems()}
+            </ScrollView>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
 });

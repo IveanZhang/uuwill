@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  Image,
-  View,
-  Text,
-  StyleSheet
+    Image,
+    View,
+    Text,
+    StyleSheet
 } from 'react-native';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
-import {findArticle} from '../../utils/textUtils';
+import { findArticle } from '../../utils/textUtils';
 
 export default class DetailsScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -34,7 +34,7 @@ export default class DetailsScreen extends React.Component {
                         height: 220,
                         width: '100%',
                     }}
-                        source={{url: this.state.details.img}} />}
+                        source={{ url: this.state.details.img }} />}
                     parallaxHeaderHeight={220}>
                     <View style={styles.container}>
                         <Text style={styles.title}>{this.state.details.title}</Text>
@@ -57,11 +57,11 @@ export default class DetailsScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      margin: 20,
-      backgroundColor: '#fff',
+        flex: 1,
+        margin: 20,
+        backgroundColor: '#fff',
     },
-    authorinfo:{
+    authorinfo: {
         flex: 1,
         padding: 15,
         flexDirection: 'row'
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     tag: {
         fontSize: 16,
         color: '#777',
-        paddingRight: 7     
+        paddingRight: 7
     },
     subtitle: {
         paddingTop: 30,
@@ -97,5 +97,4 @@ const styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 25,
     }
-  });
-  
+});
