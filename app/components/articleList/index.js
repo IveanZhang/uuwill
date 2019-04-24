@@ -11,11 +11,14 @@ export class ArticleList extends React.Component {
     componentName = 'articleList';
 
     constructor(props) {
-
+        super(props);
+        this.state = {
+            data: this.props.data
+        };
     }
 
     renderImg = () => {
-        return this.props.data.map((item, index) => {
+        return this.state.data.map((item, index) => {
             return (
                 <TouchableOpacity key={index} style={styles.innerBlock}>
                     <View style={styles.overlay}></View>
