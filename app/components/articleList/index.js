@@ -17,10 +17,12 @@ export class ArticleList extends React.Component {
         };
     }
 
+    onPress = () => {}
+
     renderImg = () => {
         return this.state.data.map((item, index) => {
             return (
-                <TouchableOpacity key={index} style={styles.innerBlock}>
+                <TouchableOpacity key={index} style={styles.innerBlock} onPress={() => { this.props.onPress(item.navigation.url, item.navigation.opt) }}>
                     <View style={styles.overlay}></View>
                     <Image style={styles.innerImg} source={{ url: item.img }} />
                     <Text style={styles.tag}>{item.tag}</Text>

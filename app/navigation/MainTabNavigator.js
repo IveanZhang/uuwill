@@ -9,12 +9,14 @@ import RecommendScreen from '../screens/recommendArticle/RecommendScreen';
 import ServiceScreen from '../screens/services/ServiceScreen';
 import ProjectScreen from '../screens/projects/ProjectScreen'
 import DetailsScreen from '../screens/details/DetailsScreen';
+import TopicsScreen from '../screens/topics/TopicsScreen';
 
 const HomeStack = createStackNavigator({
     Home: HomeScreen,
     Service: ServiceScreen,
     Projects: ProjectScreen,
-    Details: DetailsScreen
+    Details: DetailsScreen,
+    Topics: TopicsScreen
 });
 
 HomeStack.navigationOptions = {

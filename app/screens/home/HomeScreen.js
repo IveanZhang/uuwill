@@ -70,7 +70,7 @@ export default class HomeScreen extends React.Component {
                     </View>
 
                     <IvaGrid data={this.state.detailList} onPress={(url, opt) => { this.onPress(url, opt) }} />
-                    <ArticleList data={this.state.articleList} />
+                    <ArticleList data={this.state.articleList} onPress={(url, opt) => { this.onPress(url, opt) }} />
                 </View>
             </ScrollView >
         );
