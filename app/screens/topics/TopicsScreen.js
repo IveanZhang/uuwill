@@ -6,7 +6,7 @@ import {
     StyleSheet
 } from 'react-native';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
-import data from "../../data/raw/posts";
+import data from "../../data/raw/topics";
 import { RecommendArticle } from '../../components/recommendArticle';
 import PhotoGallery from '../../components/photoGallery/PhotoGallery';
 

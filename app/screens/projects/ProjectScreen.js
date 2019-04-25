@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { ArticleList } from '../../components/articleList';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
-import data from "../../data/raw/posts";
+import data from "../../data/raw/projects";
 import { RecommendArticle } from '../../components/recommendArticle';
 
 export default class ProjectScreen extends React.Component {
@@ -25,6 +25,10 @@ export default class ProjectScreen extends React.Component {
             articleList: data.articleList.data,
             articles: data.articles,
         };
+    }
+
+    onPress(url, opt) {
+        this.props.navigation.navigate(url, opt);
     }
 
     renderPosts = () => {
@@ -58,7 +62,7 @@ export default class ProjectScreen extends React.Component {
                         <Text style={styles.blogTitle}>精选文章</Text>
                         {this.renderPosts()}
                     </View>
-                    <ArticleList data={this.state.articleList} />
+                    <ArticleList data={this.state.articleList} onPress={(url, opt) => { this.onPress(url, opt) }}  />
                 </ParallaxScrollView>
             </View>
         )
