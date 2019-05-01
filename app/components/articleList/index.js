@@ -24,7 +24,7 @@ export class ArticleList extends React.Component {
             return (
                 <TouchableOpacity key={index} style={styles.innerBlock} onPress={() => { this.props.onPress(item.navigation.url, item.navigation.opt) }}>
                     <View style={styles.overlay}></View>
-                    <Image style={styles.innerImg} source={{ url: item.img }} />
+                    <Image style={styles.innerImg} source={item.img} />
                     <Text style={styles.tag}>{item.tag}</Text>
                     <Text style={styles.innerTitle}>{item.title}</Text>
                 </TouchableOpacity>)
