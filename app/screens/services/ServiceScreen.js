@@ -25,6 +25,10 @@ export default class ServiceScreen extends React.Component {
         };
     }
 
+    onPress(url, opt) {
+        this.props.navigation.navigate(url, opt);
+    }
+
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -39,7 +43,7 @@ export default class ServiceScreen extends React.Component {
                         source={this.state.img} />}
                     parallaxHeaderHeight={220}>
                     <DetailList data={this.state.detailList} />
-                    <ArticleList data={this.state.articleList} />
+                    <ArticleList data={this.state.articleList} onPress={(url, opt) => { this.onPress(url, opt) }}  />
                 </ParallaxScrollView>
             </View>
         )
