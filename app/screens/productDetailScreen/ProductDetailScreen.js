@@ -51,8 +51,17 @@ export default class ProductDetailScreen extends React.Component {
                         {this.renderBanner()}
                     </Carousel>
 
-                    <View style={styles.title}>
-                        <Text>{this.state.title}</Text>
+                    <View >
+                        <Text style={styles.title}>{this.state.title}</Text>
+                    </View>
+
+                    <View style={styles.row}>
+                        <View>
+                            <Text style={styles.price}>{this.state.price}</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.textGrey}>总销量：10k+</Text>
+                        </View>
                     </View>
                 </View>
             </ScrollView >
@@ -69,22 +78,30 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: 280,
     },
-    title: {
-        fontSize: 14,
-        margin: 20
-    },
-    services: {
-        alignSelf: 'center',
-        height: 40,
-        width: 40,
-    },
-    text: {
-        color: '#fff',
-        fontSize: 36,
+    row:{
+        marginTop: 15,
+        marginBottom: 15,
+        marginLeft: 20,
+        marginRight: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     carousel: {
         alignSelf: 'center',
         height: 280,
         width: '100%',
-    }
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: '700',
+        margin: 20
+    },
+    price: {
+        fontSize: 20,
+        color: 'red'
+    },
+    textGrey: {
+        color: '#777'
+    },
+
 });

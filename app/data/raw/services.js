@@ -42,7 +42,7 @@ const data = {
     detailList: {
         data: [
             {
-                title: '岁末清扫有它们，体验大不同',
+                title: '[即将涨价] 洛杉矶好莱坞环球影城1日电子门票（不用可退、立即出手、赠超值礼包）',
                 describe: '更轻松、更美好的大扫除攻略',
                 img: require("../../assets/images/culture.jpg"),
                 price: '9.9元起',
@@ -50,7 +50,7 @@ const data = {
                     url: "ProductDetail",
                     opt: {
                         id: 1,
-                        title: '岁末清扫有它们，体验大不同',
+                        title: '[即将涨价] 洛杉矶好莱坞环球影城1日电子门票（不用可退、立即出手、赠超值礼包）',
                         img: [
                             {
                                 url: require("../../assets/images/culture.jpg")
