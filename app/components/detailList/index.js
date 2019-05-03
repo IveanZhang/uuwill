@@ -45,7 +45,7 @@ export default class DetailList extends Component {
     }
     renderTopicItem = ({ item }) => {
         return (
-            <TouchableOpacity style={styles.topicItem}>
+            <TouchableOpacity style={styles.topicItem} onPress={() => { this.props.onPress(item.navigation.url, item.navigation.opt) }}>
                 <Image source={require('../../assets/images/education.jpg')} style={styles.topicImg} />
                 <View style={styles.topicContainer}>
                     <View style={styles.topicText}>

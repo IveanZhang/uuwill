@@ -44,12 +44,46 @@ const data = {
             {
                 title: '岁末清扫有它们，体验大不同',
                 describe: '更轻松、更美好的大扫除攻略',
+                img: require("../../assets/images/culture.jpg"),
                 price: '9.9元起',
+                navigation: {
+                    url: "ProductDetail",
+                    opt: {
+                        id: 1,
+                        title: '岁末清扫有它们，体验大不同',
+                        img: [
+                            {
+                                url: require("../../assets/images/culture.jpg")
+                            },
+                            {
+                                url: require("../../assets/images/estate.jpg")
+                            },
+                        ], 
+                        price: '9.9元起',
+                    }
+                }
             },
             {
                 title: '新年一点红，幸运一整年',
                 describe: '那些让你“红”运当头的好物',
+                img: require("../../assets/images/culture.jpg"),
                 price: '9.9元起',
+                navigation: {
+                    url: "ProductDetail",
+                    opt: {
+                        id: 2,
+                        title: '新年一点红，幸运一整年',
+                        img: [
+                            {
+                                url: require("../../assets/images/culture.jpg")
+                            },
+                            {
+                                url: require("../../assets/images/estate.jpg")
+                            },
+                        ],
+                        price: '9.9元起',
+                    }
+                }
             },
         ]
     }

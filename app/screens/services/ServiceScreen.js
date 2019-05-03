@@ -42,7 +42,7 @@ export default class ServiceScreen extends React.Component {
                     }}
                         source={this.state.img} />}
                     parallaxHeaderHeight={220}>
-                    <DetailList data={this.state.detailList} />
+                    <DetailList data={this.state.detailList} onPress={(url, opt) => { this.onPress(url, opt) }} />
                     <ArticleList data={this.state.articleList} onPress={(url, opt) => { this.onPress(url, opt) }}  />
                 </ParallaxScrollView>
             </View>
