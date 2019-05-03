@@ -3,7 +3,8 @@ import {
     StyleSheet,
     ScrollView,
     View,
-    Image
+    Image,
+    Text
 } from 'react-native';
 import { Carousel, Grid } from '@ant-design/react-native';
 

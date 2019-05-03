@@ -10,7 +10,7 @@ import ServiceScreen from '../screens/services/ServiceScreen';
 import ProjectScreen from '../screens/projects/ProjectScreen'
 import DetailsScreen from '../screens/details/DetailsScreen';
 import TopicsScreen from '../screens/topics/TopicsScreen';
-import ProductDetailScreen from '../components/productDetailScreen/ProductDetailScreen';
+import ProductDetailScreen from '../screens/productDetailScreen/ProductDetailScreen';
 
 const HomeStack = createStackNavigator({
     Home: HomeScreen,
