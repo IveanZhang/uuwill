@@ -124,12 +124,12 @@ const styles = StyleSheet.create({
         padding: 15,
     },
     topicItem: {
-        width: width * 0.7,
+        width: width * 0.6,
         marginLeft: 15,
     },
     topicImg: {
-        width: width * 0.7,
-        height: width * 0.4,
+        width: width * 0.6,
+        height: width * 0.3,
         borderWidth: 0.5,
         borderColor: '#cdcdcd',
         borderRadius: 2,
