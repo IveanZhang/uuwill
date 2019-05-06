@@ -17,7 +17,8 @@ export default class DetailList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            topic: this.props.data
+            topic: this.props.data,
+            title: this.props.title
         };
     }
 
@@ -32,7 +33,7 @@ export default class DetailList extends Component {
     renderTopic() {
         return (
             <View style={styles.topic}>
-                <Text style={styles.topicHead}>专题精选</Text>
+                <Text style={styles.topicHead}>{this.state.title}</Text>
                 <FlatList
                     data={this.state.topic}
                     keyExtractor={(item, index) => item + index}
@@ -49,7 +50,7 @@ export default class DetailList extends Component {
                 <Image source={require('../../assets/images/education.jpg')} style={styles.topicImg} />
                 <View style={styles.topicContainer}>
                     <View style={styles.topicText}>
-                        <Text style={styles.topicTitle}>{item.title}</Text>
+                        <Text style={styles.topicTitle} numberOfLines={2}>{item.title}</Text>
                         <Text style={styles.topicDesc}>{item.describe}</Text>
                     </View>
                     <Text style={styles.topicPrice}>{item.price}</Text>
@@ -139,13 +140,17 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     topicTitle: {
-        fontSize: 16,
-        color: '#666',
+        fontSize: 14,
+        color: '#444',
     },
     topicDesc: {
         fontSize: 13,
         color: '#999',
-        marginTop: 3,
+        marginTop: 10,
+    },
+    topicText: {
+        width: '80%'
+
     },
     topicPrice: {
         fontSize: 14,
