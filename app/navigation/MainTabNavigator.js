@@ -27,9 +27,9 @@ HomeStack.navigationOptions = {
         <TabBarIcon
             focused={focused}
             name={
-                Platform.OS === 'ios'
-                    ? `ios-information-circle${focused ? '' : '-outline'}`
-                    : 'md-information-circle'
+                Platform.OS === 'ios' 
+                    ? `ios-home`
+                    : `md-home`
             }
         />
     ),
@@ -45,7 +45,7 @@ RecommendStack.navigationOptions = {
     tabBarIcon: ({ focused }) => (
         <TabBarIcon
             focused={focused}
-            name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+            name={Platform.OS === 'ios' ? 'ios-information-circle-outline' : 'md-information-circle-outline'}
         />
     ),
 };
@@ -55,14 +55,14 @@ const SettingStack = createStackNavigator({
 });
 
 SettingStack.navigationOptions = {
-    tabBarLabel: '设置',
+    tabBarLabel: '特惠',
     tabBarIcon: ({ focused }) => (
         <TabBarIcon
             focused={focused}
             name={
-                Platform.OS === 'ios'
-                    ? `ios-information-circle${focused ? '' : '-outline'}`
-                    : 'md-information-circle'
+                Platform.OS === 'ios' 
+                    ? `ios-heart`
+                    : `md-heart`
             }
         />
     ),
