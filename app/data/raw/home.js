@@ -69,19 +69,39 @@ const data = {
             },
             {
                 url: 'http://www.uuwill.cn/Public/b/jr.png',
-                text: '金融'
+                text: '金融',
+                navigation: {
+                    url: "",
+                    opt: {
+                    }
+                }
             },
             {
                 url: 'http://www.uuwill.cn/Public/b/jk.png',
-                text: '健康'
+                text: '健康',
+                navigation: {
+                    url: "",
+                    opt: {
+                    }
+                }
             },
             {
                 url: 'http://www.uuwill.cn/Public/b/ym.png',
-                text: '移民'
+                text: '移民',
+                navigation: {
+                    url: "",
+                    opt: {
+                    }
+                }
             },
             {
                 url: 'http://www.uuwill.cn/Public/b/dc.png',
-                text: '地产'
+                text: '地产',
+                navigation: {
+                    url: "",
+                    opt: {
+                    }
+                }
             }
         ]
     },

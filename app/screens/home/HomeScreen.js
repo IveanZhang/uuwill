@@ -27,7 +27,9 @@ export default class HomeScreen extends React.Component {
     }
 
     onPress(url, opt) {
-        this.props.navigation.navigate(url, opt);
+        url === ''
+            ? null
+            : this.props.navigation.navigate(url, opt);
     }
 
     renderBanner() {
