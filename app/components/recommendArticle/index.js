@@ -17,37 +17,75 @@ export class RecommendArticle extends React.Component {
         }
     }
 
-    onPress() {}
+    onPress() { }
 
-    renderType1 = () => {}
+    renderType1 = () => {
+        return (
+            <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
+                <View style={styles.content}>
+                    <View style={styles.left}>
+                        <Text style={styles.title}>{this.props.data.title}</Text>
+                        <View style={styles.category}>
+                            <Text style={styles.tag}>{this.props.data.tag}</Text>
+                            <Text style={styles.tag}> | </Text>
+                            <Text style={styles.tag}>{this.props.data.author}</Text>
+                        </View>
+                    </View>
+                    <View style={styles.right}>
+                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
+                    </View>
+                </View>
+            </TouchableHighlight>
+        );
+    }
 
-    renderType2 = () => {}
+    renderType2 = () => { 
+        return (
+            <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
+                <View style={styles.content}>
+                    <View style={styles.left}>
+                        <Text style={styles.title}>{this.props.data.title}</Text>
+                        <View style={styles.category}>
+                            <Text style={styles.tag}>{this.props.data.tag}</Text>
+                            <Text style={styles.tag}> | </Text>
+                            <Text style={styles.tag}>{this.props.data.author}</Text>
+                        </View>
+                    </View>
+                    <View style={styles.right}>
+                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
+                    </View>
+                </View>
+            </TouchableHighlight>
+        );
+    }
 
-    renderType3 = () => {}
+    renderType3 = () => { 
+        return (
+            <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
+                <View style={styles.content}>
+                    <View style={styles.left}>
+                        <Text style={styles.title}>{this.props.data.title}</Text>
+                        <View style={styles.category}>
+                            <Text style={styles.tag}>{this.props.data.tag}</Text>
+                            <Text style={styles.tag}> | </Text>
+                            <Text style={styles.tag}>{this.props.data.author}</Text>
+                        </View>
+                    </View>
+                    <View style={styles.right}>
+                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
+                    </View>
+                </View>
+            </TouchableHighlight>
+        );
+    }
 
 
     renderItems = (type) => {
-        type === 1 
-            ? (
-                <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
-                    <View style={styles.content}>
-                        <View style={styles.left}>
-                            <Text style={styles.title}>{this.props.data.title}</Text>
-                            <View style={styles.category}>
-                                <Text style={styles.tag}>{this.props.data.tag}</Text>
-                                <Text style={styles.tag}> | </Text>
-                                <Text style={styles.tag}>{this.props.data.author}</Text>
-                            </View>
-                        </View>
-                        <View style={styles.right}>
-                            <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
-                        </View>
-                    </View>
-                </TouchableHighlight>
-            )
-            : type === 2 
-                ? null
-                : null
+        return type === 1
+            ? this.renderType1()
+            : type === 2
+                ? this.renderType2()
+                : this.renderType3()
     }
 
     render() {
