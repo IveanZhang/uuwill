@@ -12,35 +12,48 @@ export class RecommendArticle extends React.Component {
 
     constructor(props) {
         super(props);
-        this.onPress = this.onPress.bind(this);
+        this.state = {
+            type: this.props.data.type
+        }
     }
 
     onPress() {}
 
-    renderItems = () => {
-        return (
-            <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
-                <View style={styles.content}>
-                    <View style={styles.left}>
-                        <Text style={styles.title}>{this.props.data.title}</Text>
-                        <View style={styles.category}>
-                            <Text style={styles.tag}>{this.props.data.tag}</Text>
-                            <Text style={styles.tag}> | </Text>
-                            <Text style={styles.tag}>{this.props.data.author}</Text>
+    renderType1 = () => {}
+
+    renderType2 = () => {}
+
+    renderType3 = () => {}
+
+
+    renderItems = (type) => {
+        type === 1 
+            ? (
+                <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
+                    <View style={styles.content}>
+                        <View style={styles.left}>
+                            <Text style={styles.title}>{this.props.data.title}</Text>
+                            <View style={styles.category}>
+                                <Text style={styles.tag}>{this.props.data.tag}</Text>
+                                <Text style={styles.tag}> | </Text>
+                                <Text style={styles.tag}>{this.props.data.author}</Text>
+                            </View>
+                        </View>
+                        <View style={styles.right}>
+                            <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
                         </View>
                     </View>
-                    <View style={styles.right}>
-                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
-                    </View>
-                </View>
-            </TouchableHighlight>
-        );
+                </TouchableHighlight>
+            )
+            : type === 2 
+                ? null
+                : null
     }
 
     render() {
         return (
             <View style={styles.container}>
-                {this.renderItems()}
+                {this.renderItems(this.state.type)}
             </View>
         );
     }
