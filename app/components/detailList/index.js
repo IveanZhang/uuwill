@@ -44,6 +44,7 @@ export default class DetailList extends Component {
             </View>
         )
     }
+
     renderTopicItem = ({ item }) => {
         return (
             <TouchableOpacity style={styles.topicItem} onPress={() => { this.props.onPress(item.navigation.url, item.navigation.opt) }}>
@@ -51,7 +52,7 @@ export default class DetailList extends Component {
                 <View style={styles.topicContainer}>
                     <View style={styles.topicText}>
                         <Text style={styles.topicTitle} numberOfLines={2}>{item.title}</Text>
-                        <Text style={styles.topicDesc}>{item.describe}</Text>
+                        <Text style={styles.topicDesc} numberOfLines={2} >{item.describe}</Text>
                     </View>
                     <Text style={styles.topicPrice}>¥{item.price}</Text>
                 </View>
