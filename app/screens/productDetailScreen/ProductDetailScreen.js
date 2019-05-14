@@ -219,7 +219,7 @@ export default class ProductDetailScreen extends React.Component {
 
                     <View style={styles.row}>
                         <View>
-                            <Text style={styles.price}>{this.state.price}</Text>
+                            <Text style={styles.price}>¥{this.state.price}</Text>
                         </View>
                         <View>
                             <Text style={styles.textGrey}>总销量：10k+</Text>

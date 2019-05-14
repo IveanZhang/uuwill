@@ -17,7 +17,7 @@ export class RecommendArticle extends React.Component {
         }
     }
 
-    onPress() { }
+    onPress() {}
 
     renderType1 = () => {
         return (
