@@ -64,24 +64,24 @@ const data = {
                 }
             },
             {
-                title: '新年一点红，幸运一整年',
-                describe: '那些让你“红”运当头的好物',
-                img: require("../../assets/images/culture.jpg"),
-                price: '9.9元起',
+                title: '日本大阪+京都+东京8日7晚自由行',
+                describe: '【专车专导|含机场接送+3天中文司导包车游】古城大阪城·岚山嵯峨野·京都古寺祈福·东京晴空塔·台场高达 | 蟹道乐&鳗鱼饭·醉美和服·迪士尼玩趣',
+                img: require("../../assets/images/product/300p0f00000079324A941_C_750_420_Q90.jpg"),
+                price: '10262起',
                 navigation: {
                     url: "ProductDetail",
                     opt: {
                         id: 2,
-                        title: '新年一点红，幸运一整年',
+                        title: '日本大阪+京都+东京8日7晚自由行',
                         img: [
                             {
-                                url: require("../../assets/images/culture.jpg")
+                                url: require("../../assets/images/product/300p0f00000079324A941_C_750_420_Q90.jpg")
                             },
                             {
-                                url: require("../../assets/images/estate.jpg")
+                                urlLink: "https://dimg03.c-ctrip.com/images/fd/tg/g2/M0A/88/47/CghzgVWwueeAD47DADZFmoNTjAw127_C_750_420_Q90.jpg"
                             },
                         ],
-                        price: '9.9元起',
+                        price: '10262',
                     }
                 }
             },
