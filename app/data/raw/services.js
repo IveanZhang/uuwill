@@ -78,7 +78,7 @@ const data = {
                                 url: require("../../assets/images/product/300p0f00000079324A941_C_750_420_Q90.jpg")
                             },
                             {
-                                urlLink: "https://dimg03.c-ctrip.com/images/fd/tg/g2/M0A/88/47/CghzgVWwueeAD47DADZFmoNTjAw127_C_750_420_Q90.jpg"
+                                url: "https://dimg03.c-ctrip.com/images/fd/tg/g2/M0A/88/47/CghzgVWwueeAD47DADZFmoNTjAw127_C_750_420_Q90.jpg"
                             },
                         ],
                         price: '10262',
@@ -129,7 +129,7 @@ const data = {
                                 url: require("../../assets/images/product/300p0f00000079324A941_C_750_420_Q90.jpg")
                             },
                             {
-                                urlLink: "https://dimg03.c-ctrip.com/images/fd/tg/g2/M0A/88/47/CghzgVWwueeAD47DADZFmoNTjAw127_C_750_420_Q90.jpg"
+                                url: "https://dimg03.c-ctrip.com/images/fd/tg/g2/M0A/88/47/CghzgVWwueeAD47DADZFmoNTjAw127_C_750_420_Q90.jpg"
                             },
                         ],
                         price: '10262',

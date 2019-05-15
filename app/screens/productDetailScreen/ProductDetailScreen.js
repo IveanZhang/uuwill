@@ -137,7 +137,7 @@ export default class ProductDetailScreen extends React.Component {
                 <View
                     style={[styles.containerHorizontal]} key={index}
                 >
-                    <Image style={styles.carousel} source={item.url === undefined ? {url:item.urlLink} : item.url} resizeMode={'cover'} />
+                    <Image style={styles.carousel} source={ typeof item.url === 'string' ? {url:item.url} : item.url} resizeMode={'cover'} />
                 </View>);
         });
     }
