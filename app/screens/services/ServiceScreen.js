@@ -21,7 +21,8 @@ export default class ServiceScreen extends React.Component {
             title: this.props.navigation.getParam('title'),
             img: this.props.navigation.getParam('img'),
             articleList: data.articleList.data,
-            detailList: data.detailList.data
+            subjectList: data.subjectList.data,
+            promotionList: data.promotionList.data
         };
     }
 
@@ -43,8 +44,8 @@ export default class ServiceScreen extends React.Component {
                         source={this.state.img} />}
                     parallaxHeaderHeight={220}>
 
-                    <DetailList data={this.state.detailList} title='专题报道' onPress={(url, opt) => { this.onPress(url, opt) }} />
-                    <DetailList data={this.state.detailList} title='热门促销' onPress={(url, opt) => { this.onPress(url, opt) }} />
+                    <DetailList data={this.state.subjectList} title='专题报道' onPress={(url, opt) => { this.onPress(url, opt) }} />
+                    <DetailList data={this.state.promotionList} title='热门促销' onPress={(url, opt) => { this.onPress(url, opt) }} />
 
                     <ArticleList data={this.state.articleList} onPress={(url, opt) => { this.onPress(url, opt) }}  />
                 </ParallaxScrollView>
