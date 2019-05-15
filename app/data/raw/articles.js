@@ -14,7 +14,7 @@ const articles = [
     },
     {
         id: 2,
-        type: 1,
+        type: 2,
         title: '海外看病火？为啥这么多机构都热衷投资一家海外医疗公司',
         img: 'https://gw.alipayobjects.com/zos/rmsportal/beKIEIHjDxrboDvaLHZs.png',
         tag: '文化',
@@ -27,7 +27,7 @@ const articles = [
     },
     {
         id: 3,
-        type: 1,
+        type: 3,
         title: '海外看病火？为啥这么多机构都热衷投资一家海外医疗公司',
         img: 'https://gw.alipayobjects.com/zos/rmsportal/oIkLZVVJYahBbpztgFQv.png',
         tag: '文化',
@@ -40,7 +40,7 @@ const articles = [
     },
     {
         id: 4,
-        type: 1,
+        type: 2,
         title: 'CRO推出有望良币驱逐劣币，或进一步带动中概股价',
         img: 'https://gw.alipayobjects.com/zos/rmsportal/LwUpqblnlisckDLpBCRx.png',
         tag: '文化',

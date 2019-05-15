@@ -17,12 +17,12 @@ export class RecommendArticle extends React.Component {
         }
     }
 
-    onPress() {}
+    onPress() { }
 
     renderType1 = () => {
         return (
             <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
-                <View style={styles.content}>
+                <View style={[styles.row, styles.content]}>
                     <View style={styles.left}>
                         <Text style={styles.title}>{this.props.data.title}</Text>
                         <View style={styles.category}>
@@ -39,30 +39,30 @@ export class RecommendArticle extends React.Component {
         );
     }
 
-    renderType2 = () => { 
+    renderType2 = () => {
         return (
             <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
-                <View style={styles.content}>
-                    <View style={styles.left}>
-                        <Text style={styles.title}>{this.props.data.title}</Text>
-                        <View style={styles.category}>
-                            <Text style={styles.tag}>{this.props.data.tag}</Text>
-                            <Text style={styles.tag}> | </Text>
-                            <Text style={styles.tag}>{this.props.data.author}</Text>
-                        </View>
-                    </View>
-                    <View style={styles.right}>
+                <View style={styles.row}>
+                    <Text style={styles.title}>{this.props.data.title}</Text>
+                    <View style={[styles.row, styles.content]}>
                         <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
+                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
+                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
+                    </View>
+                    <View style={styles.category}>
+                        <Text style={styles.tag}>{this.props.data.tag}</Text>
+                        <Text style={styles.tag}> | </Text>
+                        <Text style={styles.tag}>{this.props.data.author}</Text>
                     </View>
                 </View>
             </TouchableHighlight>
         );
     }
 
-    renderType3 = () => { 
+    renderType3 = () => {
         return (
             <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
-                <View style={styles.content}>
+                <View style={[styles.row, styles.content]}>
                     <View style={styles.left}>
                         <Text style={styles.title}>{this.props.data.title}</Text>
                         <View style={styles.category}>
@@ -102,9 +102,11 @@ const styles = StyleSheet.create({
         borderColor: '#A0A0A0',
         borderBottomWidth: 0.5,
     },
-    content: {
+    row: {
         flex: 1,
         padding: 10,
+    },
+    content: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between'
