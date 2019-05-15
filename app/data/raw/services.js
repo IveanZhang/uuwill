@@ -93,7 +93,7 @@ const data = {
                 title: '香港5日自由行(4钻)',
                 describe: '精选4钻酒店【冲万人游热卖线路，放“价”就等你来！】',
                 img: 'https://dimg03.c-ctrip.com/images/10010i0000009nm832A07_C_750_420_Q90.jpg',
-                price: '2068',
+                price: '2257',
                 navigation: {
                     url: "ProductDetail",
                     opt: {
@@ -110,15 +110,15 @@ const data = {
                                 url: 'https://dimg03.c-ctrip.com/images/fd/tg/g4/M06/A4/A5/CggYHFX6dV2AQdLxAB_3yGs1jl4268_C_750_420_Q90.jpg'
                             },
                         ], 
-                        price: '2068',
+                        price: '2257',
                     }
                 }
             },
             {
-                title: '日本大阪+京都+东京8日7晚自由行',
-                describe: '【专车专导|含机场接送+3天中文司导包车游】古城大阪城·岚山嵯峨野·京都古寺祈福·东京晴空塔·台场高达 | 蟹道乐&鳗鱼饭·醉美和服·迪士尼玩趣',
-                img: require("../../assets/images/product/300p0f00000079324A941_C_750_420_Q90.jpg"),
-                price: '10262',
+                title: '马尔代夫班多士岛Bandos6日4晚自由行(5钻)+京都+东京8日7晚自由行',
+                describe: '『5-7月早鸟特惠·浮潜圣地』4晚沙滩屋+含早晚餐&快艇接送+儿童特惠+超高性价比',
+                img: 'https://dimg02.c-ctrip.com/images/100c0k000000bezeh739E_C_750_420_Q90.jpg',
+                price: '6081',
                 navigation: {
                     url: "ProductDetail",
                     opt: {
@@ -126,13 +126,16 @@ const data = {
                         title: '日本大阪+京都+东京8日7晚自由行',
                         img: [
                             {
-                                url: require("../../assets/images/product/300p0f00000079324A941_C_750_420_Q90.jpg")
+                                url: 'https://dimg02.c-ctrip.com/images/100c0k000000bezeh739E_C_750_420_Q90.jpg'
                             },
                             {
-                                url: "https://dimg03.c-ctrip.com/images/fd/tg/g2/M0A/88/47/CghzgVWwueeAD47DADZFmoNTjAw127_C_750_420_Q90.jpg"
+                                url: 'https://dimg07.c-ctrip.com/images/22040v000000k0r6n0C76_C_750_420_Q90.jpg'
+                            },
+                            {
+                                url: "https://dimg01.c-ctrip.com/images/100o0b0000005j1iiECCD_C_750_420_Q90.jpg"
                             },
                         ],
-                        price: '10262',
+                        price: '6081',
                     }
                 }
             },
