@@ -23,6 +23,19 @@ export default class DetailsScreen extends React.Component {
         };
     }
 
+    renderArticleContent() {
+        console.log(this.state.details.details);
+        return this.state.details.details.map((item, index) => {
+            return item.type === 'subtitle'
+                ? (<Text key={index} style={styles.subtitle}>{item.content}</Text>)
+                : item.type === 'content'
+                    ? (<Text key={index} style={styles.content}>{item.content}</Text>)
+                    : (<View key={index} style={styles.alignCenter}>
+                        <View style={styles.seperator}></View>
+                       </View>)
+        });
+    }
+
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -43,11 +56,7 @@ export default class DetailsScreen extends React.Component {
                             <Text style={styles.tag}>|</Text>
                             <Text style={styles.tag}>{this.state.details.tag}</Text>
                         </View>
-                        <Text style={styles.subtitle}>{this.state.details.details.subtitle}</Text>
-                        <View style={styles.alignCenter}>
-                            <View style={styles.seperator}></View>
-                        </View>
-                        <Text style={styles.content}>{this.state.details.details.content}</Text>
+                        {this.renderArticleContent()}
                     </View>
                 </ParallaxScrollView>
             </View>
