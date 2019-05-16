@@ -164,6 +164,31 @@ const data = {
                     }
                 }
             },
+            {
+                title: '泰国普吉岛7日5晚半自助游',
+                describe: '【自营爆品*0自费】A线【指定2晚悦榕庄悦梿套房+3晚无边泳池私人沙滩酒店】【出海pp+鸡蛋岛+大堡碉浮潜】【24h管家+2天自由活动】【B线2晚5钻+双体帆船蜜月岛】【c线5钻纯玩希尔顿+芭东】',
+                img: 'https://dimg07.c-ctrip.com/images/fd/tg/g1/M09/41/29/CghzfVWH4omAI1q1AAkDuXvWsyI513_C_750_420_Q90.jpg',
+                price: '2419',
+                navigation: {
+                    url: "ProductDetail",
+                    opt: {
+                        id: 2,
+                        title: '泰国普吉岛7日5晚半自助游',
+                        img: [
+                            {
+                                url: 'https://dimg07.c-ctrip.com/images/fd/tg/g1/M09/41/29/CghzfVWH4omAI1q1AAkDuXvWsyI513_C_750_420_Q90.jpg'
+                            },
+                            {
+                                url: 'https://dimg04.c-ctrip.com/images/100w0k000000c18j23656_C_750_420_Q90.jpg'
+                            },
+                            {
+                                url: "https://dimg08.c-ctrip.com/images/100n0k000000bb4buCD5B_C_750_420_Q90.jpg"
+                            },
+                        ],
+                        price: '2419',
+                    }
+                }
+            },
         ]
     }
 };
