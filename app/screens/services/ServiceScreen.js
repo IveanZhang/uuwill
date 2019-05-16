@@ -44,7 +44,7 @@ export default class ServiceScreen extends React.Component {
                         source={this.state.img} />}
                     parallaxHeaderHeight={220}>
 
-                    <DetailList data={this.state.subjectList} title='专题报道' onPress={(url, opt) => { this.onPress(url, opt) }} />
+                    <DetailList data={this.state.subjectList} title='专题项目' onPress={(url, opt) => { this.onPress(url, opt) }} />
                     <DetailList data={this.state.promotionList} title='热门促销' onPress={(url, opt) => { this.onPress(url, opt) }} />
 
                     <ArticleList data={this.state.articleList} onPress={(url, opt) => { this.onPress(url, opt) }}  />

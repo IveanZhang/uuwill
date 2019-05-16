@@ -24,7 +24,7 @@ export class IvaGrid extends React.Component {
         }
     }
 
-    onPress() { }
+    onPress() {}
 
     renderImg = () => {
         return this.state.data.map((item, index) => {

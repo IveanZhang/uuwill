@@ -85,6 +85,31 @@ const data = {
                     }
                 }
             },
+            {
+                title: '杭州3日自由行(3钻)',
+                describe: '【文艺范超爱】高铁/动车往返·入住西子湖畔精品酒店—漫走栖霞湖舍·醉江南花香四溢·赏花踏青热卖款',
+                img: require("../../assets/images/product/100710000000pxdup339B_C_750_420_Q90.jpg"),
+                price: '456',
+                navigation: {
+                    url: "ProductDetail",
+                    opt: {
+                        id: 2,
+                        title: '杭州3日自由行(3钻)',
+                        img: [
+                            {
+                                url: require("../../assets/images/product/100710000000pxdup339B_C_750_420_Q90.jpg")
+                            },
+                            {
+                                url: "https://dimg04.c-ctrip.com/images/100a10000000pohju6025_C_750_420_Q90.jpg"
+                            },
+                            {
+                                url: "https://dimg04.c-ctrip.com/images/300p0b00000057ekrD17C_C_750_420_Q90.jpg"
+                            },
+                        ],
+                        price: '456',
+                    }
+                }
+            },
         ]
     },
     promotionList: {

@@ -74,10 +74,9 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     blogTitle: {
-        paddingLeft: 10,
+        paddingLeft: 20,
         paddingTop: 10,
-        paddingBottom: 10,
         fontSize: 18,
-        color: '#303030'
+        color: '#222'
     }
 });
