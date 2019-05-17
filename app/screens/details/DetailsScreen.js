@@ -24,7 +24,6 @@ export default class DetailsScreen extends React.Component {
     }
 
     renderArticleContent() {
-        console.log(this.state.details.details);
         return this.state.details.details.map((item, index) => {
             return item.type === 'subtitle'
                 ? (<Text key={index} style={styles.subtitle}>{item.content}</Text>)
