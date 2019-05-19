@@ -117,11 +117,6 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         marginBottom: 10,
     },
-    topicHead: {
-        fontSize: 18,
-        color: '#666',
-        padding: 15,
-    },
     topicItem: {
         width: width * 0.7,
         marginLeft: 15,
@@ -137,18 +132,5 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginTop: 10,
-    },
-    topicTitle: {
-        fontSize: 16,
-        color: '#666',
-    },
-    topicDesc: {
-        fontSize: 13,
-        color: '#999',
-        marginTop: 3,
-    },
-    topicPrice: {
-        fontSize: 14,
-        color: '#b4282d',
-    },
-});
+    }
+ });
