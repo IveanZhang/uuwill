@@ -20,18 +20,20 @@ export default class DetailsScreen extends React.Component {
         this.state = {
             id: this.props.navigation.getParam('article'),
             details: findArticle(this.props.navigation.getParam('article'))
-        };
+        }; 
     }
 
     renderArticleContent() {
         return this.state.details.details.map((item, index) => {
             return item.type === 'subtitle'
                 ? (<Text key={index} style={styles.subtitle}>{item.content}</Text>)
-                : item.type === 'content'
+                : item.type === 'content' 
                     ? (<Text key={index} style={styles.content}>{item.content}</Text>)
-                    : (<View key={index} style={styles.alignCenter}>
-                        <View style={styles.seperator}></View>
-                       </View>)
+                    : item.type === 'image'
+                        ? (<Image key={index} style={[styles.img, styles.margin10]} source={typeof item.url === 'string' ? { url: item.url } : item.url}></Image>)
+                        : (<View key={index} style={styles.alignCenter}>
+                            <View style={styles.seperator}></View>
+                        </View>)
         });
     }
 
@@ -104,5 +106,13 @@ const styles = StyleSheet.create({
     content: {
         fontSize: 16,
         lineHeight: 25,
+    },
+    img: {
+        alignSelf: 'center',
+        height: 280,
+        width: '100%',
+    },
+    margin10: {
+        margin: 10
     }
 });

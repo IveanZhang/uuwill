@@ -2,20 +2,20 @@ const articles = [
     {
         id: 1,
         type: 1,
-        title: '海外看病火？为啥这么多机构都热衷投资一家海外医疗公司',
+        title: 'CRO推出有望良币驱逐劣币，或进一步带动中概股价',
         img: 'https://gw.alipayobjects.com/zos/rmsportal/LwUpqblnlisckDLpBCRx.png',
         tag: '文化',
         author: '第一财经',
         time: '',
         details: [
-            {type: 'subtitle', content: '2018年新增免签或相关签证政策变动回顾'},
+            {type: 'subtitle', content: '无需搭建开发环境和部署服务器，2分钟完成站点部署'},
             {type: 'sperator', content: ''},
-            {type: 'content', content: '回顾2018这一年，我国签证的含金量可以说是一路飙升，给了人们更多的出行选择。'},
-            {type: 'content', content: '2018年1月1日，卢旺达对所有国家公民实行落地签证政策，并且中国与卢旺达互免签证政策于12月23日正式生效。'},
-            {type: 'content', content: '1月16日，中国与阿联酋互免签证。'},
-            {type: 'content', content: '1月16日，中国与阿联酋互免签证。'},
-            {type: 'content', content: '1月16日，中国与阿联酋互免签证。'},
-            {type: 'content', content: '1月16日，中国与阿联酋互免签证。'},
+            {type: 'content', content: '无需搭建开发环境和部署服务器，基于开发者工具，使用丰富的 UI 组件和行业模板研发 H5 站点，2 分钟完成站点部署。无需搭建开发环境和部署服务器，基于开发者工具，使用丰富的 UI 组件和行业模板研发 H5 站点，2 分钟完成站点部署。'},
+            {type: 'image', url: 'https://gw.alipayobjects.com/zos/rmsportal/zWbNRpCQBhpZgnYidYXu.png'},
+            {type: 'content', content: '无需搭建开发环境和部署服务器，基于开发者工具，使用丰富的 UI 组件和行业模板研发 H5 站点，2 分钟完成站点部署。'},
+            {type: 'subtitle', content: '相关个股'},
+            {type: 'sperator', content: ''},
+            {type: 'content', content: '无需搭建开发环境和部署服务器，基于开发者工具，使用丰富的 UI 组件和行业模板研发 H5 站点，2 分钟完成站点部署。无需搭建开发环境和部署服务器，基于开发者工具，使用丰富的 UI 组件和行业模板研发 H5 站点，2 分钟完成站点部署。'},
         ]
     },
     {
