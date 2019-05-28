@@ -46,7 +46,7 @@ export default class PhotoGallery extends Component {
     renderTopicItem = ({ item }) => {
         return (
             <TouchableOpacity style={styles.topicItem}>
-                <Image key={index} style={styles.topicImg} source={ typeof item.url === 'string' ? {url:item.url} : item.url}></Image>
+                <Image style={styles.topicImg} source={ typeof item.img === 'string' ? {url:item.img} : item.img}></Image>
                 <View style={styles.topicContainer}>
                     <View style={styles.topicText}>
                         <Text style={styles.topicTitle}>{item.title}</Text>
