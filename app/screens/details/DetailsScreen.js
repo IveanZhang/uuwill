@@ -3,7 +3,8 @@ import {
     Image,
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    Dimensions
 } from 'react-native';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
 import { findArticle } from '../../utils/textUtils';
@@ -30,7 +31,7 @@ export default class DetailsScreen extends React.Component {
                 : item.type === 'content' 
                     ? (<Text key={index} style={styles.content}>{item.content}</Text>)
                     : item.type === 'image'
-                        ? (<Image key={index} style={[styles.img, styles.margin10]} source={typeof item.url === 'string' ? { url: item.url } : item.url}></Image>)
+                        ? (<Image key={index} resizeMode={'cover'} style={[styles.img, styles.margin10]} height={item.height ? item.height : 200 } source={typeof item.url === 'string' ? { url: item.url } : item.url}></Image>)
                         : (<View key={index} style={styles.alignCenter}>
                             <View style={styles.seperator}></View>
                         </View>)
@@ -109,8 +110,8 @@ const styles = StyleSheet.create({
     },
     img: {
         alignSelf: 'center',
-        height: 280,
         width: '100%',
+        height: '200'
     },
     margin10: {
         margin: 10
