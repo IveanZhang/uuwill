@@ -4,7 +4,6 @@ import {
     View,
     Text,
     StyleSheet,
-    Dimensions
 } from 'react-native';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
 import { findArticle } from '../../utils/textUtils';
