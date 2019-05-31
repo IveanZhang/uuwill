@@ -64,7 +64,7 @@ const articles = [
         title: '嘉年华第一季度---冰雪奇缘',
         img: 'http://eduen.happyneg.net/wp-content/uploads/2018/12/WechatIMG72.png?id=9121',
         tag: '旅游',
-        author: 'uuwill',
+        author: '量子嘉年华',
         time: '',
         details: [
             {type: 'subtitle', content: '嘉年华第一季度---冰雪奇缘'},
@@ -78,7 +78,7 @@ const articles = [
         title: '嘉年华第二季度---春暖花开',
         img: 'http://eduen.happyneg.net/wp-content/uploads/2018/12/WechatIMG82.jpeg?id=9129',
         tag: '旅游',
-        author: 'uuwill',
+        author: '量子嘉年华',
         time: '',
         details: [
             {type: 'subtitle', content: '嘉年华第二季度---春暖花开'},
