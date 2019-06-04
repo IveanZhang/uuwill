@@ -22,7 +22,11 @@ const articles = [
         id: 2,
         type: 2,
         title: '2018签证相关政策变动回顾',
-        img: 'https://gw.alipayobjects.com/zos/rmsportal/beKIEIHjDxrboDvaLHZs.png',
+        img: [
+            'https://gw.alipayobjects.com/zos/rmsportal/beKIEIHjDxrboDvaLHZs.png',
+            'https://gw.alipayobjects.com/zos/rmsportal/beKIEIHjDxrboDvaLHZs.png',
+            'https://gw.alipayobjects.com/zos/rmsportal/beKIEIHjDxrboDvaLHZs.png',
+        ],
         tag: '文化',
         author: '移民签证',
         time: '',
