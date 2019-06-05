@@ -23,9 +23,9 @@ const articles = [
         type: 2,
         title: '2018签证相关政策变动回顾',
         img: [
-            'https://gw.alipayobjects.com/zos/rmsportal/beKIEIHjDxrboDvaLHZs.png',
-            'https://gw.alipayobjects.com/zos/rmsportal/beKIEIHjDxrboDvaLHZs.png',
-            'https://gw.alipayobjects.com/zos/rmsportal/beKIEIHjDxrboDvaLHZs.png',
+            'https://gw.alipayobjects.com/zos/rmsportal/WrjeSmUalUFPwrpVqVvS.png',
+            'https://gw.alipayobjects.com/zos/rmsportal/xCFIsNkadJDCwwfnggEK.png',
+            'https://gw.alipayobjects.com/zos/rmsportal/amymXnmVYoSgsLJPqtUd.png',
         ],
         tag: '文化',
         author: '移民签证',
@@ -78,7 +78,7 @@ const articles = [
     },
     {
         id: 4,
-        type: 2,
+        type: 1,
         title: '嘉年华第二季度---春暖花开',
         img: 'http://eduen.happyneg.net/wp-content/uploads/2018/12/WechatIMG82.jpeg?id=9129',
         tag: '旅游',
@@ -92,7 +92,7 @@ const articles = [
     },
     {
         id: 5,
-        type: 2,
+        type: 1,
         title: '嘉年华第三季度---激情夏日',
         img: 'http://eduen.happyneg.net/wp-content/uploads/2018/12/Untitled-1-2.jpg?id=9144',
         tag: '旅游',
