@@ -104,6 +104,20 @@ const articles = [
             {type: 'image', height: 1300,  url: 'http://eduen.happyneg.net/wp-content/uploads/2018/12/WechatIMG29-1.jpeg'},
         ]
     },
+    {
+        id: 5,
+        type: 1,
+        title: '嘉年华第四季度---加国枫情',
+        img: 'http://eduen.happyneg.net/wp-content/uploads/2018/12/%E6%97%A0%E6%A0%87%E9%A2%98.jpg',
+        tag: '旅游',
+        author: '量子嘉年华',
+        time: '',
+        details: [
+            {type: 'subtitle', content: '嘉年华第四季度---加国枫情'},
+            {type: 'sperator', content: ''},
+            {type: 'image', height: 1300,  url: 'http://eduen.happyneg.net/wp-content/uploads/2018/12/12-2.jpg'},
+        ]
+    },
 ];
 
 export default articles;
