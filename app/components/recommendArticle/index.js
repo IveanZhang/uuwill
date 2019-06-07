@@ -39,15 +39,21 @@ export class RecommendArticle extends React.Component {
         );
     }
 
+    renderImages(images){
+        return images.map( (img, index) => {
+            return (
+                <Image key={index} style={{ width: 110, height: 72 }} source={{ url: img }} />
+            );
+        });
+    }
+
     renderType2 = () => {
         return (
             <TouchableHighlight onPress={this.props.handlePress} underlayColor={'rgb(240, 240, 240)'} >
                 <View style={styles.row}>
                     <Text style={[styles.row, styles.title]}>{this.props.data.title}</Text>
                     <View style={[styles.row, styles.content]}>
-                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
-                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
-                        <Image style={{ width: 110, height: 72 }} source={{ url: this.props.data.img }} />
+                        {this.renderImages(this.props.data.img)}
                     </View>
                     <View style={[styles.row, styles.category]}>
                         <Text style={styles.tag}>{this.props.data.tag}</Text>
