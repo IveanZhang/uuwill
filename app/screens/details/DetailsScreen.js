@@ -48,7 +48,7 @@ export default class DetailsScreen extends React.Component {
                         height: 220,
                         width: '100%',
                     }}
-                        source={{ url: this.state.details.img }} />}
+                        source={ typeof this.state.details.img === 'string' ? { url: this.state.details.img } : { url: this.state.details.img[0] } } />}
                     parallaxHeaderHeight={220}>
                     <View style={styles.container}>
                         <Text style={styles.title}>{this.state.details.title}</Text>
