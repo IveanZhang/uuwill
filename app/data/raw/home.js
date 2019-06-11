@@ -29,8 +29,7 @@ const data = {
                 navigation: {
                     url: "Service",
                     opt: {
-                        title: "旅游",
-                        img: require("../../assets/images/travel.jpg")
+                        id: 1,
                     }
                 }
             },
@@ -40,8 +39,7 @@ const data = {
                 navigation: {
                     url: "Service",
                     opt: {
-                        title: "教育",
-                        img: require("../../assets/images/education.jpg")
+                        id: 2,
                     }
                 }
             },
@@ -51,8 +49,7 @@ const data = {
                 navigation: {
                     url: "Service",
                     opt: {
-                        title: "文化",
-                        img: require("../../assets/images/culture.jpg")
+                        id: 3,
                     }
                 }
             },
@@ -62,44 +59,7 @@ const data = {
                 navigation: {
                     url: "Service",
                     opt: {
-                        title: "签证",
-                        img: require("../../assets/images/visa.jpg")
-                    }
-                }
-            },
-            {
-                url: 'http://www.uuwill.cn/Public/b/jr.png',
-                text: '金融',
-                navigation: {
-                    url: "",
-                    opt: {
-                    }
-                }
-            },
-            {
-                url: 'http://www.uuwill.cn/Public/b/jk.png',
-                text: '健康',
-                navigation: {
-                    url: "",
-                    opt: {
-                    }
-                }
-            },
-            {
-                url: 'http://www.uuwill.cn/Public/b/ym.png',
-                text: '移民',
-                navigation: {
-                    url: "",
-                    opt: {
-                    }
-                }
-            },
-            {
-                url: 'http://www.uuwill.cn/Public/b/dc.png',
-                text: '地产',
-                navigation: {
-                    url: "",
-                    opt: {
+                        id: 4,
                     }
                 }
             }
